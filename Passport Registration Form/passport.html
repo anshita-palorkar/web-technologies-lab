@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Passport Registration </title>
+        <link rel="stylesheet" href="./passport.css">
+    </head>
+    <body>
+        <form class="my-form">
+            <div class="container">
+            <h1>User Registration</h1><br>
+            <ul>
+                <li>
+                    <div class="grid grid-2">
+                    <label for="office" class="required">Passport Office</label>
+                    <select id="office" required>
+                        <option selected disabled>-- Passport Office --</option>
+                        <option>CPV Delhi</option>
+                        <option>Ahmedabad</option>
+                        <option>Amritsar</option>
+                        <option>Bareilly</option>
+                        <option>Bengaluru</option>
+                        <option>Bhopal</option>
+                        <option>Bhubaneswar</option>
+                        <option>Chandigarh</option>      
+                    </select>
+                    </div>
+                </li>
+                <li>
+                <div class="grid grid-2">
+                    <label for="name" class="required">Given Name</label>
+                    <input type="text" id="name" maxlength = "45" required>
+                    <label for="sname"class="required">Surname</label>  
+                    <input type="text" id="sname" maxlength = "45" required>
+                </div>
+                </li>
+                <li>
+                <div class="grid grid-2">
+                    <label for="dob" class="required">Date of Birth</label>
+                    <input type="date" id="dob" required>
+                    <label for="email" class="required">Email ID</label>
+                    <input type="email" id="email" maxlength = "35" required>
+                    <label for="emlogin" class="required" style="padding-right:180px;">Do you want your Login Id
+                        to be same as E-mail Id?</label>
+                    <div class="controls" id="emlogin">
+                        <label class="radio">
+                          <input type="radio" name="emlogin" value="yes" onclick="autofill()">Yes
+                        </label>
+                        <label class="radio">
+                           <input type="radio" name="emlogin" value="no" onclick="undoautofill()">No
+                        </label>
+                    </div>
+                </div>
+                </li>    
+                <li>
+                    <div class="grid grid-2">
+                        <label for="lid" class="required">Login ID</label>
+                        <input type="text" id="lid" required>
+                        <label for="pwd"class="required">Password</label>  
+                        <input type="password" id="pwd" required>
+                        <label for="conf"class="required">Confirm Password</label>  
+                        <input type="password" id="conf" oninput="confirmValidity();" required>
+                    </div>
+                </li>   
+                <li>
+                    <div class="grid grid-2">
+                        <label for="hintq" class="required">Hint Question</label>
+                        <select id="hintq" required>
+                            <option selected disabled>-- Select --</option>
+                            <option>Birth City</option>
+                            <option>Favourite Colour</option>
+                            <option>Favourite Cricketer</option>
+                            <option>Favourite Food</option>
+                            <option>Make of first car owned</option>
+                            <option>Mother's Maiden Name</option>      
+                        </select>
+                        <label for="hintans" class="required">Hint Answer</label>  
+                        <input type="text" id="hintans" required> 
+                    </div>
+                </li>
+                <li>
+                    <div class="grid grid-2">
+                        <label for="captchasection" class="required">Enter Characters Shown</label>
+                    <div class="wrapper" id="captchasection">
+                        <div class="captcha-area">
+                          <div class="captcha-img">
+                            <img src="captcha-bg.png" alt="Captch Background">
+                            <span class="captcha"></span>
+                          </div>
+                          <button class="reload-btn"><p>&#10227;</p></button>
+                        </div>
+                        <span class="input-area">
+                          <input type="text" maxlength="6" required>
+                        </span>
+                        <button class="check-btn">Check</button>
+                        <div class="status-text"></div>
+                      </div>
+                      </div>
+                      <script src="captcha.js"></script>
+                </li>
+                <br><hr><br>  
+                <li>
+                <div class="grid grid-3">
+                    <span style="padding-right:500px;"></span>
+                    <button class="btn-grid" type="submit" id="reg" disabled>Register</button>
+                    <button class="btn-grid" type="reset">Clear</button>
+                </div>
+                </li>    
+            </ul>
+            </div>
+        </form>
+        <footer style="text-align: right; padding-right: 10rem;">
+                <small>Ministry of External Affairs, Government of India</small>
+        </footer>
