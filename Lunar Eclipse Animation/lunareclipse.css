@@ -1,0 +1,23 @@
+body {
+    background-color: black;
+}
+
+  div {
+    margin: 50px auto;
+    margin-top: 250px;
+    width: 200px;
+    height: 200px;
+    background: black;
+    border-radius: 50%;
+    animation: linear moon 8s infinite;
+  }
+  
+  @keyframes moon {
+    0% {
+      box-shadow: -250px 0px 0 -1px #eee, -250px 0 50px #999;
+      transform: translateX(250px);
+    }
+    100% {
+      box-shadow: 250px 0px 0 -1px #eee, 250px 0 50px #999;
+      transform: translateX(-250px);
+    }
